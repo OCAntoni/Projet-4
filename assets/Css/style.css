@@ -3,6 +3,10 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Shrikhand', cursive;
 }
 
+body {
+    margin:0px;
+}
+
 .card {
     border-radius: 20px;
     background-color: #f6f6f6;
@@ -13,6 +17,7 @@ font-family: 'Shrikhand', cursive;
 .card-2 {
     border-radius: 15px;
     background-color: white;
+    width: 100%;
 }
 
 h1 {
@@ -89,6 +94,14 @@ button {
     background-color: #f6f6f6;
 }
 
+.restaurants {
+    padding: 18px 17px;
+}
+
+.restaurants-cards-2 {
+    gap:18px;
+}
+
 .restaurants h2 {
     margin: 54px 80px 26px 20px;
 }
@@ -97,4 +110,27 @@ button {
     width:100%;
     height: 231px;
     border-radius: 15px;
+}
+
+footer {
+    padding: 22px 25px;
+    background-color: #353535;
+}
+
+h4 {
+    color: white;
+    font-family: 'Shrikhand';
+    font-size: 18px;
+    font-weight: 400;
+}
+
+li {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pied-de-page {
+    display: flex;
 }
