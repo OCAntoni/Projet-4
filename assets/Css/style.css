@@ -1,0 +1,100 @@
+* { 
+font-family: 'Roboto', sans-serif;
+font-family: 'Shrikhand', cursive;
+}
+
+.card {
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    height: 72.379px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card-2 {
+    border-radius: 15px;
+    background-color: white;
+}
+
+h1 {
+    font-size: 30px;
+    margin:14px 89px 13px 89px;
+    padding: 0px 19px 0px 16px;
+}
+
+h2 {
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.location {
+    background-color: #EAEAEA;
+}
+
+.reservation { 
+    background-color: #f3f3f3;
+    }
+
+.reservation h2 {
+    margin: 39px 58px 0px 42px;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.reservation-txt {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+i {
+    width: 12px;
+    height: 16px;
+    gap: 15px;
+}
+
+button {
+    border-radius: 25px;
+    width: 218px;
+    height: 50px;
+    background: var(--button, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
+    border:none;
+    margin-bottom: 57px;
+}
+
+.button-txt {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.button-hdp {
+    display: flex;
+    justify-content: center;
+}
+
+.fonctionnement h2 {
+    margin: 48px 80px 26px 20px;
+}
+
+.cards-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.restaurants {
+    background-color: #f6f6f6;
+}
+
+.restaurants h2 {
+    margin: 54px 80px 26px 20px;
+}
+
+.restaurants img {
+    width:100%;
+    height: 231px;
+    border-radius: 15px;
+}
