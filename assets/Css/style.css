@@ -207,12 +207,12 @@ ul {
 
 /*Mobile page menu 1*/
 
-.header-menu1 h1 {
+.header-menu h1 {
     margin-top: 14px;
     margin-bottom: 13px;
 }
 
-.fa-header-menu1 {
+.fa-header-menu {
     position: relative;
     right: 42px;
 }
@@ -222,6 +222,16 @@ ul {
     height: 275px;
 }
 
+.carte-restaurant {
+    background-color: #f6f6f6;
+}
+
 .plat-menu h4 {
     color: black;
+}
+
+.card-menu {
+    border-radius: 15px;
+    padding: 15px;
+    background-color: white;
 }
