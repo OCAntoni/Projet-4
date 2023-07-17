@@ -68,12 +68,6 @@ h3 {
     text-align: center;
 }
 
-i {
-    width: 12px;
-    height: 16px;
-    gap: 15px;
-}
-
 button {
     border-radius: 25px;
     width: 218px;
@@ -128,10 +122,6 @@ button {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-}
-
-article .card-2 {
-    gap:18px;
 }
 
 .restaurants h2 {
