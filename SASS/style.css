@@ -1,4 +1,8 @@
 /*Mobile page d'accueil*/
+header {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
 body {
   margin: 0px;
 }
@@ -70,6 +74,7 @@ h3 {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 300;
+  margin-bottom: 27px;
 }
 
 .button-hdp {
@@ -94,6 +99,12 @@ h3 {
 
 .fonctionnement h2 {
   margin: 48px 80px 26px 20px;
+}
+.fonctionnement .fonctionnement-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 68px;
 }
 .fonctionnement .fa-fonctionnement {
   margin-right: 20px;
@@ -123,11 +134,18 @@ h3 {
 
 .restaurants {
   background-color: #f6f6f6;
-  padding: 18px 17px;
+  padding-right: 18px;
+  padding-left: 17px;
 }
 .restaurants a {
   text-decoration: none;
   color: black;
+}
+.restaurants-cards-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 66px;
 }
 .restaurants p {
   font-family: Roboto;
@@ -135,12 +153,19 @@ h3 {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  margin: 0px;
+  margin-top: 5px;
+  margin-bottom: 12px;
 }
 .restaurants h2 {
   font-family: "Roboto", sans-serif;
   font-size: 24px;
   font-weight: 700;
   margin: 54px 80px 26px 20px;
+}
+.restaurants h3 {
+  margin: 0px;
+  margin-top: 16px;
 }
 .restaurants img {
   width: 100%;
@@ -149,11 +174,26 @@ h3 {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.restaurants .heart-restaurants {
+  position: absolute;
+  right: 25px;
+  bottom: 33px;
+}
+.restaurants i {
+  display: inline-block;
+  width: 22px;
+  height: 21px;
+  background-color: linear-gradient(to bottom, #FF79DA, #9356DC);
+}
 
 .cards-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.card-txt {
+  padding-left: 17px;
 }
 
 .new {
@@ -192,13 +232,19 @@ footer {
   flex-direction: column;
   align-items: flex-start;
 }
+.pied-de-page p {
+  margin: 0px;
+}
 .pied-de-page li {
   color: white;
   list-style: none;
 }
 .pied-de-page ul {
+  display: flex;
+  flex-direction: column;
   padding: 0px;
   margin: 0px;
+  gap: 7px;
 }
 
 footer h4 {
