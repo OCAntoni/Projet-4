@@ -311,9 +311,9 @@ footer {
         margin-bottom: 13px;
     }
 
-    .fa {
-        position: relative;
-        right: 42px;
+    i {
+        position: absolute;
+        left: 17px;
     }
 }
 
@@ -334,6 +334,13 @@ footer {
         font-family: $font-family2;
         font-size: 28px;
         font-weight: 400;
+        margin: 0px;
+        padding: 32px 17px 0px 17px;
+    }
+
+    i {
+        position: absolute;
+        right: 24px;
     }
 }
 
@@ -345,7 +352,19 @@ footer {
         border-bottom: 3px solid #99E2D0;
         padding-bottom: 9px;
         width: 40px;
+        margin: 0px;
     }
+}
+
+.ordre-repas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 40px 13px;
+}
+
+div .card-menu {
+    margin: 0px;
 }
 
 .plat-menu {
@@ -384,7 +403,6 @@ footer {
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         width: 186px;
         height: 50px;
-        margin-top: 40px;
         margin-bottom: 40px;
     }
 
