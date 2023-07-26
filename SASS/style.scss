@@ -475,13 +475,20 @@ a {
          .card {
             width: 100%;
         } 
+
+        .fonctionnement-numbers {
+            
+    
+        }
     }
 
     .restaurants {
+        padding: 30px 180px 30px 180px;
 
         .restaurants-cards-2 {
             display: grid;
             grid-template-columns: repeat(2,2fr);
+            gap:100px
         }
     }
 
