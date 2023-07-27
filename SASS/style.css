@@ -1,6 +1,12 @@
 /*Mobile page d'accueil*/
 header {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  position: relative;
+  padding: 14px 0px 13px 0px;
+}
+header h1 {
+  margin: 0px;
 }
 
 body {
@@ -26,7 +32,7 @@ h1 {
   font-weight: 400;
   text-align: center;
   margin-top: 14px;
-  margin-bottom: 13px;
+  margin-bottom: 0px;
 }
 
 h2 {
@@ -45,6 +51,8 @@ h3 {
   background-color: #EAEAEA;
   display: flex;
   justify-content: center;
+  z-index: 0;
+  position: relative;
 }
 .location .ft-header {
   margin-right: 17px;
@@ -97,6 +105,10 @@ h3 {
   font-weight: 500;
 }
 
+.fonctionnement {
+  padding-left: 32px;
+  padding-right: 20px;
+}
 .fonctionnement h2 {
   margin: 48px 80px 26px 20px;
 }
@@ -105,6 +117,12 @@ h3 {
   flex-direction: column;
   gap: 25px;
   margin-bottom: 68px;
+}
+.fonctionnement .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .fonctionnement .fa-fonctionnement {
   margin-right: 20px;
@@ -124,9 +142,12 @@ h3 {
   width: 24px;
   height: 24px;
   position: absolute;
-  left: 20px;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .fonctionnement .fa-color {
   color: #9356DC;
@@ -176,6 +197,9 @@ h3 {
   position: absolute;
   right: 25px;
   bottom: 33px;
+}
+.restaurants .heart-restaurants:active {
+  color: #9356DC;
 }
 
 .cards-content {
@@ -263,10 +287,6 @@ footer .mail {
 }
 
 /*Mobile page menu*/
-.header-menu h1 {
-  margin-top: 14px;
-  margin-bottom: 13px;
-}
 .header-menu i {
   position: absolute;
   left: 17px;
@@ -274,7 +294,7 @@ footer .mail {
 
 .img-menu {
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
 .img-menu img {
   -o-object-fit: cover;
@@ -286,6 +306,7 @@ footer .mail {
 .menu {
   position: relative;
   z-index: 1;
+  margin-top: -30px;
   background-color: #f6f6f6;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -300,6 +321,11 @@ footer .mail {
 .menu i {
   position: absolute;
   right: 24px;
+  font-size: 22px;
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .titre-carte h3 {
@@ -380,6 +406,10 @@ a {
 /* Version desktop*/
 @media (min-width: 1024px) {
   /* Page d'accueil */
+  header {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
   .reservation h2 {
     margin: 0px;
     margin-top: 30px;
@@ -413,21 +443,32 @@ a {
   .restaurants .restaurants-cards-2 {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    gap: 100px;
+    gap: 50px 100px;
+  }
+  .restaurants .plat-menu, .restaurants .plat-menu p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+    align-items: center;
+    padding: 30px 25px;
   }
   footer h4 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  footer .pied-de-page {
-    align-items: flex-end;
+    margin: 0px;
   }
   footer .pied-de-page ul {
     display: flex;
     flex-direction: row;
   }
   /*Page des menus*/
+  h1 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
   .menu {
     margin-left: 193px;
     margin-right: 192px;
@@ -446,7 +487,10 @@ a {
   }
   .menu .plat-menu .prix-menu {
     position: absolute;
-    right: 250px;
+    right: 215px;
+  }
+  .menu .card-menu {
+    width: 100%;
   }
 }
 /* Continuer ici transcription css en sass pour les pages de menu*//*# sourceMappingURL=style.css.map */
