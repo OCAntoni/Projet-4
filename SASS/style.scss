@@ -229,8 +229,15 @@ h3 {
         bottom: 33px;
     }
 
-    .heart-restaurants:active {
-        color:$purple;
+    .heart-restaurants-2 {
+        position: absolute;
+        right:25px;
+        bottom: 33px;
+        background: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
     }
 }
 
@@ -361,18 +368,13 @@ footer {
         font-size: 28px;
         font-weight: 400;
         margin: 0px;
-        padding: 32px 17px 0px 17px;
+        padding: 32px 17px 0px 0px;
     }
 
     i {
-        position: absolute;
-        right: 24px;
+        position: relative;
+        left:320px;
         font-size: 22px;
-        background: -webkit-linear-gradient(#FF79DA, #9356DC);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-       
     }
 }
 
