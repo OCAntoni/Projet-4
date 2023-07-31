@@ -1,24 +1,17 @@
+/*---Variables couleurs---*/
+
 $green: #99E2D0 ; 
 $green-darken: #008766 ;
 $blue: #89C8FA ;
 $blue-darken: #003A68 ;
 $purple: #9356DC ;
 
+/*---Variables font---*/
+
 $font-family1:'Roboto', sans-serif;
 $font-family2: 'Shrikhand', cursive;
     
-/*Mobile page d'accueil*/
-
-header {
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-    z-index: 1;
-    position: relative;
-    padding: 14px 0px 13px 0px;
-
-    h1 {
-        margin: 0px;
-    }
-}
+/*---Mobile page d'accueil---*/
 
 body {
     margin:0px;
@@ -58,6 +51,21 @@ h3 {
     font-weight: 700;
 }
 
+/*--Header*/
+
+header {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    position: relative;
+    padding: 14px 0px 13px 0px;
+
+    h1 {
+        margin: 0px;
+    }
+}
+
+/*--Location*/
+
 .location {
         background-color: #EAEAEA;
         display: flex;
@@ -76,6 +84,8 @@ h3 {
         color: #353535;
     }
 }
+
+/*--Reservation--*/
 
 .reservation { 
     background-color: #f3f3f3;
@@ -122,6 +132,8 @@ h3 {
         font-weight: 500;
     }
 }
+
+/*--Fonctionnement--*/
 
 .fonctionnement {
     padding-left: 32px;
@@ -177,6 +189,8 @@ h3 {
         color:$purple ;
     }
 }
+
+/*--Restaurants--*/
 
 .restaurants {
     background-color: #f6f6f6;
@@ -278,6 +292,8 @@ h3 {
     }
 }
 
+/*--Footer--*/
+
 footer {
     padding: 22px 25px;
     background-color: #353535;
@@ -307,6 +323,7 @@ footer {
 }
 
 footer {
+    
     h4 {
         color: white;
         font-family: 'Shrikhand';
@@ -334,7 +351,9 @@ footer {
     }
 }
 
-/*Mobile page menu*/
+/*---Mobile page menu---*/
+
+/*--header menu--*/
 
 .header-menu {
 
@@ -355,6 +374,8 @@ footer {
         height: 275px;
     }
 }
+
+/*--Menu--*/
 
 .menu {
     position: relative;
@@ -463,9 +484,11 @@ a {
     text-decoration: none;
 }
 
-/* Version desktop*/
+/*---Version desktop---*/
 
-/* Loader */
+@media (min-width: 1024px) {
+
+/*--Loader--*/
 
 .loader {
     position:absolute;
@@ -513,14 +536,16 @@ a {
     }
 }
 
-@media (min-width: 1024px) {
+    /*---Page d'accueil--- */
 
-    /* Page d'accueil */
+    /*--Header--*/
 
     header {
         padding-top: 26px;
         padding-bottom: 26px;
     }
+
+    /*--Reservation--*/
 
     .reservation {
 
@@ -541,6 +566,8 @@ a {
             margin-bottom: 30px;
         }
     }
+
+    /*--Fonctionnement--*/
 
     .fonctionnement {
         padding: 50px 180px 50px 180px;
@@ -563,6 +590,8 @@ a {
         } 
     }
 
+    /*--Restaurants--*/
+
     .restaurants {
         padding: 30px 180px 30px 180px;
 
@@ -580,6 +609,8 @@ a {
             }
         }
     }
+
+    /*--Footer--*/
 
     footer {
         display: flex;
@@ -601,7 +632,9 @@ a {
         }
     }
 
-    /*Page des menus*/
+    /*---Page des menus---*/
+
+    /*--Header menu--*/
 
     .header-menu {
 
@@ -614,6 +647,8 @@ a {
             top:30px;
         }
     }
+
+    /*--Menu--*/
 
     .menu {
         margin-left: 193px;
