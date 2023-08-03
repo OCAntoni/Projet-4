@@ -204,8 +204,10 @@ header h1 {
   position: absolute;
   right: 25px;
   bottom: 33px;
+  font-size: 22px;
 }
 .restaurants .heart-restaurants-2 {
+  font-size: 22px;
   position: absolute;
   right: 25px;
   bottom: 33px;
@@ -213,6 +215,9 @@ header h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.restaurants .heart-restaurants-solid {
+  display: none;
 }
 
 .cards-content {
@@ -329,16 +334,26 @@ footer .mail {
   border-top-right-radius: 40px;
 }
 .menu h2 {
+  display: flex;
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-weight: 400;
   margin: 0px;
+  margin-left: 20px;
   padding: 32px 17px 0px 0px;
 }
 .menu i {
-  position: relative;
-  left: 320px;
+  position: absolute;
   font-size: 22px;
+}
+.menu .like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 24px;
+}
+.menu .coeur-solid {
+  opacity: 0;
 }
 
 .titre-carte h3 {
@@ -362,6 +377,10 @@ div .card-menu {
   margin: 0px;
 }
 
+.plat-menu {
+  display: flex;
+  flex-direction: column;
+}
 .plat-menu h4 {
   color: black;
   font-family: "Roboto", sans-serif;
@@ -369,19 +388,27 @@ div .card-menu {
   font-weight: 500;
   margin-top: 0px;
   margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .plat-menu p {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
   margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.plat-menu .prix-menu {
+
+.prix-menu {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 700;
-  position: absolute;
-  right: 28px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .commande-menu {
@@ -429,6 +456,7 @@ a {
     justify-content: center;
     align-items: center;
     transition: 3s ease-out;
+    z-index: 2;
   }
   .loader p {
     color: #9356DC;
@@ -438,7 +466,6 @@ a {
   .point-row {
     display: flex;
     flex-direction: row;
-    animation: loader 1s infinite alternate;
   }
   .point-row .dot {
     width: 30px;
@@ -446,12 +473,14 @@ a {
     background: linear-gradient(to bottom, #FF79DA, #9356DC);
     border-radius: 50%;
     margin: 15px;
+    animation: loader 1s infinite alternate;
+    animation-timing-function: ease-in-out;
   }
-  .point-row .dot .point2 {
-    animation-delay: 0, 2s;
+  .point-row .dot.point2 {
+    animation-delay: 0.2s;
   }
-  .point-row .dot .point3 {
-    animation-delay: 0, 6s;
+  .point-row .dot.point3 {
+    animation-delay: 0.6s;
   }
   @keyframes loader {
     100% {
@@ -494,6 +523,12 @@ a {
   .fonctionnement .card {
     width: 100%;
   }
+  .fonctionnement p {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   /*--Restaurants--*/
   .restaurants {
     padding: 30px 180px 30px 180px;
@@ -502,6 +537,19 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     gap: 50px 100px;
+  }
+  .restaurants .heart-restaurants-solid {
+    position: absolute;
+    right: 25px;
+    bottom: 33px;
+    opacity: 0;
+  }
+  .restaurants .heart-restaurants-solid:hover {
+    opacity: 1;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .restaurants .plat-menu, .restaurants .plat-menu p {
     text-overflow: ellipsis;
@@ -541,29 +589,32 @@ a {
     display: flex;
     justify-content: center;
   }
-  .menu i {
-    position: relative;
-    left: 315px;
-  }
-  .menu i:active {
-    color: red;
-  }
   .menu .ordre-repas {
     padding-left: 210px;
     padding-right: 211px;
+  }
+  .menu .card-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu .coeur-solid {
+    opacity: 0;
+  }
+  .menu .coeur-solid:hover {
+    opacity: 1;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .menu .plat-menu p {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
   }
-  .menu .plat-menu .prix-menu {
-    position: absolute;
-    right: 15px;
-  }
-  .menu .card-menu {
-    width: 100%;
-    position: relative;
+  .menu .prix-menu {
+    display: flex;
+    justify-content: end;
   }
 }
 /* Continuer ici transcription css en sass pour les pages de menu*//*# sourceMappingURL=style.css.map */
