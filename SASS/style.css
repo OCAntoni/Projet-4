@@ -373,13 +373,18 @@ footer .mail {
   margin: 40px 13px;
 }
 
-div .card-menu {
+.card-menu {
   margin: 0px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .plat-menu {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .plat-menu h4 {
   color: black;
@@ -393,10 +398,12 @@ div .card-menu {
   white-space: nowrap;
 }
 .plat-menu p {
+  display: flex;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
   margin: 0px;
+  margin-right: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -407,8 +414,7 @@ div .card-menu {
   font-size: 15px;
   font-weight: 700;
   display: flex;
-  justify-content: end;
-  align-items: center;
+  align-items: end;
 }
 
 .commande-menu {
