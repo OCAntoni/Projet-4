@@ -241,9 +241,11 @@ header {
         position: absolute;
         right:25px;
         bottom: 33px;
+        font-size: 22px;
     }
 
     .heart-restaurants-2 {
+        font-size: 22px;
         position: absolute;
         right:25px;
         bottom: 33px;
@@ -251,7 +253,10 @@ header {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        
+    }
+
+    .heart-restaurants-solid {
+        display: none;
     }
 }
 
@@ -386,17 +391,29 @@ footer {
     border-top-right-radius: 40px;
 
     h2 {
+        display: flex;
         font-family: $font-family2;
         font-size: 28px;
         font-weight: 400;
         margin: 0px;
+        margin-left: 20px;
         padding: 32px 17px 0px 0px;
     }
 
     i {
-        position: relative;
-        left:320px;
+        position: absolute;
         font-size: 22px;
+    }
+
+    .like {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 24px;
+    }
+
+    .coeur-solid {
+        opacity: 0;
     }
 }
 
@@ -424,6 +441,9 @@ div .card-menu {
 }
 
 .plat-menu {
+    display: flex;
+    flex-direction: column;
+
     h4 {
         color: black;
         font-family: $font-family1;
@@ -431,6 +451,9 @@ div .card-menu {
         font-weight: 500;
         margin-top: 0px;
         margin-bottom: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     p {
@@ -438,16 +461,19 @@ div .card-menu {
         font-size: 15px;
         font-weight: 300;
         margin: 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
+}
 
-    .prix-menu {
-        font-family: $font-family1;
-        font-size: 15px;
-        font-weight: 700;
-        position: absolute;
-        right: 28px;
-    }
-    
+.prix-menu {
+    font-family: $font-family1;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 .commande-menu {
@@ -500,6 +526,7 @@ a {
     justify-content: center;
     align-items: center;
     transition: 3s ease-out;
+    z-index:2;
 
     p {
         color: $purple;
@@ -511,7 +538,6 @@ a {
 .point-row {
     display: flex;
     flex-direction: row;
-    animation: loader 1s infinite alternate;
 
         .dot {
             width: 30px;
@@ -519,13 +545,16 @@ a {
             background: linear-gradient(to bottom, #FF79DA, #9356DC);
             border-radius: 50%;
             margin: 15px;
+            animation: loader 1s infinite alternate;
+            animation-timing-function: ease-in-out;
 
-        .point2 {
-            animation-delay: 0,02s;
+
+        &.point2 {
+            animation-delay: 0.2s;
         }
         
-        .point3 {
-            animation-delay: 0,06s;
+        &.point3 {
+            animation-delay: 0.6s;
         }
     }
 }
@@ -578,16 +607,23 @@ a {
         }
     
         .fonctionnement-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin: 0px;
-        position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0px;
+            position: relative;
         }
 
-         .card {
+        .card {
             width: 100%;
-        } 
+        }
+
+        p { 
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     /*--Restaurants--*/
@@ -599,6 +635,21 @@ a {
             display: grid;
             grid-template-columns: repeat(2,2fr);
             gap:50px 100px;
+        }
+
+        .heart-restaurants-solid {
+            position: absolute;
+            right:25px;
+            bottom: 33px;
+            opacity: 0;
+        }
+
+        .heart-restaurants-solid:hover {
+            opacity: 1;
+            background: linear-gradient(#FF79DA, #9356DC);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .plat-menu  {
@@ -659,18 +710,26 @@ a {
             justify-content: center;
         }
 
-        i {
-            position: relative;
-            left: 315px;
-        }
-
-        i:active {
-            color: red;
-        }
-
         .ordre-repas {
             padding-left: 210px;
             padding-right: 211px;
+        }
+
+        .card-menu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .coeur-solid {
+            opacity: 0;
+        }
+
+        .coeur-solid:hover {
+            opacity: 1;
+            background: linear-gradient(#FF79DA, #9356DC);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .plat-menu {
@@ -680,16 +739,11 @@ a {
             overflow: hidden;
             white-space: nowrap;
             }
-
-            .prix-menu {
-                position: absolute;
-                right:15px;
-            }
         }
 
-        .card-menu {
-            width:100%;
-            position: relative;
+        .prix-menu {
+            display: flex;
+            justify-content: end;
         }
     }
 }
