@@ -453,20 +453,21 @@ a {
 @media (min-width: 1024px) {
   /*--Loader--*/
   .loader {
-    position: absolute;
+    position: fixed;
     background: gray;
+    z-index: 2;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 3s ease-out;
-    z-index: 2;
+    animation: stop 4s both;
   }
   .loader p {
-    color: #9356DC;
+    color: black;
     font-family: "Shrikhand", cursive;
+    font-size: 50px;
     animation: loader 1s infinite alternate;
   }
   .point-row {
@@ -491,6 +492,23 @@ a {
   @keyframes loader {
     100% {
       transform: translateY(-30px);
+    }
+  }
+  @keyframes stop {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    90% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
     }
   }
   /*---Page d'accueil--- */
@@ -621,6 +639,9 @@ a {
   .menu .prix-menu {
     display: flex;
     justify-content: end;
+  }
+  .commande-menu .commander:hover {
+    opacity: 0, 7;
   }
 }
 /* Continuer ici transcription css en sass pour les pages de menu*//*# sourceMappingURL=style.css.map */
