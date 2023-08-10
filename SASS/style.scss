@@ -123,9 +123,6 @@ header {
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         border:none;
         margin-bottom: 57px;
-    }
-
-    .button-txt {
         color: white;
         font-family: 'Roboto';
         font-size: 16px;
@@ -464,7 +461,6 @@ footer {
     }
 
     p {
-        display: flex;
         font-family: $font-family1;
         font-size: 15px;
         font-weight: 300;
@@ -498,7 +494,7 @@ footer {
         margin-bottom: 40px;
     }
 
-    .button-txt {
+    button {
         color: white;
         font-family: 'Roboto';
         font-size: 16px;
@@ -534,7 +530,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: stop 4s both;
+    animation: stop 4s forwards;
 
     p {
         color: black;
@@ -620,9 +616,11 @@ a {
     }
 
     .button-hdp {
+        margin-bottom: 30px;
+        transition: 1s;
 
-        button {
-            margin-bottom: 30px;
+        &:hover {
+            opacity: 0.7;
         }
     }
 
@@ -672,9 +670,11 @@ a {
             right:25px;
             bottom: 33px;
             opacity: 0;
+            font-size: 22px;
         }
 
-        .heart-restaurants-solid:hover {
+        .heart-restaurants:hover + .heart-restaurants-solid {
+            display: unset;
             opacity: 1;
             background: linear-gradient(#FF79DA, #9356DC);
             background-clip: text;
@@ -741,8 +741,8 @@ a {
     }
 
     .menu {
-        margin-left: 193px;
-        margin-right: 192px;
+        max-width: 1055px;
+        margin: -30px auto 0;
 
         h2 {
             display: flex;
@@ -750,9 +750,11 @@ a {
         }
 
         .ordre-repas {
-            padding-left: 210px;
-            padding-right: 211px;
-            animation: apparition 3s;
+            transform: scale(0);
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            animation: apparition 3s forwards;
 
             &.ordre2 {
                 animation-delay: 0.3s;
@@ -764,6 +766,7 @@ a {
         }
 
         .card-menu {
+            position: relative;
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -793,31 +796,46 @@ a {
         .prix-menu {
             display: flex;
             justify-content: end;
+        }
 
-            .check {
-                display: flex;
-                align-items: end;
-                border-top-right-radius: 15px;
-                border-bottom-right-radius: 15px;
-                background-color: #99E2D0;
-                visibility: hidden;
-            }
-            
-            .ckeck-effet { 
-                color: #99E2D0;
-                border: 1px solid red;
-                border-radius: 50%;
-            }
+        .check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 59px;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            right: 0;
+            top: 0;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            background-color: $green;
+            color: $green;
+            opacity: 0;
+        
+        }
+        
+        .ckeck-effet { 
+            background-color: white;
+            color: $green;
+            border-radius: 50%;
+            padding: 4px;
+        }
 
-            .check:hover {
-                visibility: visible;
-            }
+        .card-menu:hover > .check {
+            opacity:1 ;
         }
 
         .commande-menu {
         
-            .commander:hover {
-                opacity: 0,7;
+            .commander {
+                transition: 1s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+                
             }
         }
     }
