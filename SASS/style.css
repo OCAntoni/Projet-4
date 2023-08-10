@@ -102,8 +102,6 @@ header h1 {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border: none;
   margin-bottom: 57px;
-}
-.button-hdp .button-txt {
   color: white;
   font-family: "Roboto";
   font-size: 16px;
@@ -399,7 +397,6 @@ footer .mail {
   white-space: nowrap;
 }
 .plat-menu p {
-  display: flex;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -431,7 +428,7 @@ footer .mail {
   height: 50px;
   margin-bottom: 40px;
 }
-.commande-menu .button-txt {
+.commande-menu button {
   color: white;
   font-family: "Roboto";
   font-size: 16px;
@@ -463,7 +460,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: stop 4s both;
+    animation: stop 4s forwards;
   }
   .loader p {
     color: black;
@@ -527,8 +524,12 @@ a {
   .reservation p {
     margin: 18px 0px 18px 0px;
   }
-  .button-hdp button {
+  .button-hdp {
     margin-bottom: 30px;
+    transition: 1s;
+  }
+  .button-hdp:hover {
+    opacity: 0.7;
   }
   /*--Fonctionnement--*/
   .fonctionnement {
@@ -568,8 +569,10 @@ a {
     right: 25px;
     bottom: 33px;
     opacity: 0;
+    font-size: 22px;
   }
-  .restaurants .heart-restaurants-solid:hover {
+  .restaurants .heart-restaurants:hover + .heart-restaurants-solid {
+    display: unset;
     opacity: 1;
     background: linear-gradient(#FF79DA, #9356DC);
     background-clip: text;
@@ -615,17 +618,19 @@ a {
     }
   }
   .menu {
-    margin-left: 193px;
-    margin-right: 192px;
+    max-width: 1055px;
+    margin: -30px auto 0;
   }
   .menu h2 {
     display: flex;
     justify-content: center;
   }
   .menu .ordre-repas {
-    padding-left: 210px;
-    padding-right: 211px;
-    animation: apparition 3s;
+    transform: scale(0);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    animation: apparition 3s forwards;
   }
   .menu .ordre-repas.ordre2 {
     animation-delay: 0.3s;
@@ -634,6 +639,7 @@ a {
     animation-delay: 0.6s;
   }
   .menu .card-menu {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -657,24 +663,36 @@ a {
     display: flex;
     justify-content: end;
   }
-  .menu .prix-menu .check {
+  .menu .check {
     display: flex;
-    align-items: end;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #99E2D0;
-    visibility: hidden;
-  }
-  .menu .prix-menu .ckeck-effet {
     color: #99E2D0;
-    border: 1px solid red;
-    border-radius: 50%;
+    opacity: 0;
   }
-  .menu .prix-menu .check:hover {
-    visibility: visible;
+  .menu .ckeck-effet {
+    background-color: white;
+    color: #99E2D0;
+    border-radius: 50%;
+    padding: 4px;
+  }
+  .menu .card-menu:hover > .check {
+    opacity: 1;
+  }
+  .menu .commande-menu .commander {
+    transition: 1s;
   }
   .menu .commande-menu .commander:hover {
-    opacity: 0, 7;
+    opacity: 0.7;
   }
 }
 /* Continuer ici transcription css en sass pour les pages de menu*//*# sourceMappingURL=style.css.map */
