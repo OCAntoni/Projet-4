@@ -452,6 +452,29 @@ footer {
 
 /*--Menu--*/
 
+@keyframes valider {
+    from {
+        transform: translateX(30px) ;
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes prix {
+    0% {
+        transform: translateX(-15px) ;
+    }
+
+    100% {
+        transform: translateX(-50px);
+    }
+    
+}
+
 .menu {
     position: relative;
     z-index: 1;
@@ -485,6 +508,42 @@ footer {
     .coeur-solid {
         opacity: 0;
     }
+
+
+    .check {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 59px;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        right: 0;
+        top: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: $green;
+        color: $green;
+        opacity: 0;
+    }
+    
+    .ckeck-effet { 
+        background-color: white;
+        color: $green;
+        border-radius: 50%;
+        padding: 4px;
+    }
+
+    .card-menu:hover > .check {
+        opacity: 1;
+        animation: valider 0.3s both;
+        transition-duration: 300ms;
+    }
+
+    .card-menu:hover > .prix-menu {
+        animation: prix 0.3s both;
+        transition-duration: 300ms;
+    }
 }
 
 .titre-carte {
@@ -508,10 +567,10 @@ footer {
 }
 
 .card-menu {
+    position: relative;
     margin: 0px;
     display: flex;
     justify-content: space-between;
-
 }
 
 .plat-menu {
@@ -656,6 +715,18 @@ a {
 
     /*--Restaurants--*/
 
+    @keyframes remplir {
+        from {
+            transform: scaleY(0);
+        }
+
+        to {
+            transform: scaleY(1);
+        }
+        
+    }
+
+
     .restaurants {
         padding: 30px 180px 30px 180px;
 
@@ -680,14 +751,8 @@ a {
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-
-        .plat-menu  {
-            &, p {
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-            }
+            animation: remplir 0.5s ease-in;
+            transition: 0.5s;
         }
     }
 
@@ -719,9 +784,9 @@ a {
 
     .header-menu {
 
-    h1 {
-        margin-bottom: 0px;
-        margin-top: 0px;
+        h1 {
+            margin-bottom: 0px;
+            margin-top: 0px;
         }
 
         i {
@@ -738,27 +803,6 @@ a {
         100% {
             transform: scale(1);
         }
-    }
-
-    @keyframes valider {
-        0% {
-            transform: translateX(30px) ;
-        }
-
-        100% {
-            transform: translateX(0px);
-        }
-    }
-
-    @keyframes prix {
-        0% {
-            transform: translateX(-15px) ;
-        }
-
-        100% {
-            transform: translateX(-50px);
-        }
-        
     }
 
     .menu {
@@ -803,53 +847,21 @@ a {
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: remplir 0.5s;
         }
 
-        .plat-menu {
-
-            p {
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
+            .plat-menu  {
+                &, p {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
             }
-        }
+        
 
         .prix-menu {
             display: flex;
             justify-content: end;
-        }
-
-        .check {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 59px;
-            height: 100%;
-            position: absolute;
-            display: flex;
-            right: 0;
-            top: 0;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            background-color: $green;
-            color: $green;
-            opacity: 0;
-        }
-        
-        .ckeck-effet { 
-            background-color: white;
-            color: $green;
-            border-radius: 50%;
-            padding: 4px;
-        }
-
-        .card-menu:hover > .check {
-            opacity: 1;
-            animation: valider 0.3s both;
-        }
-
-        .card-menu:hover > .prix-menu {
-            animation: prix 0.3s both;
         }
 
         .commande-menu {
