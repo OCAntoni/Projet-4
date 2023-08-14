@@ -385,6 +385,24 @@ footer .mail {
 }
 
 /*--Menu--*/
+@keyframes valider {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes prix {
+  0% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
 .menu {
   position: relative;
   z-index: 1;
@@ -415,6 +433,37 @@ footer .mail {
 .menu .coeur-solid {
   opacity: 0;
 }
+.menu .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 59px;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #99E2D0;
+  color: #99E2D0;
+  opacity: 0;
+}
+.menu .ckeck-effet {
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 50%;
+  padding: 4px;
+}
+.menu .card-menu:hover > .check {
+  opacity: 1;
+  animation: valider 0.3s both;
+  transition-duration: 300ms;
+}
+.menu .card-menu:hover > .prix-menu {
+  animation: prix 0.3s both;
+  transition-duration: 300ms;
+}
 
 .titre-carte h3 {
   font-family: "Roboto", sans-serif;
@@ -435,6 +484,7 @@ footer .mail {
 }
 
 .card-menu {
+  position: relative;
   margin: 0px;
   display: flex;
   justify-content: space-between;
@@ -558,6 +608,14 @@ a {
     align-items: center;
   }
   /*--Restaurants--*/
+  @keyframes remplir {
+    from {
+      transform: scaleY(0);
+    }
+    to {
+      transform: scaleY(1);
+    }
+  }
   .restaurants {
     padding: 30px 180px 30px 180px;
   }
@@ -580,11 +638,8 @@ a {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  .restaurants .plat-menu, .restaurants .plat-menu p {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    animation: remplir 0.5s ease-in;
+    transition: 0.5s;
   }
   /*--Footer--*/
   footer {
@@ -617,22 +672,6 @@ a {
     }
     100% {
       transform: scale(1);
-    }
-  }
-  @keyframes valider {
-    0% {
-      transform: translateX(30px);
-    }
-    100% {
-      transform: translateX(0px);
-    }
-  }
-  @keyframes prix {
-    0% {
-      transform: translateX(-15px);
-    }
-    100% {
-      transform: translateX(-50px);
     }
   }
   .menu {
@@ -671,8 +710,9 @@ a {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: remplir 0.5s;
   }
-  .menu .plat-menu p {
+  .menu .plat-menu, .menu .plat-menu p {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -680,35 +720,6 @@ a {
   .menu .prix-menu {
     display: flex;
     justify-content: end;
-  }
-  .menu .check {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 59px;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    right: 0;
-    top: 0;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #99E2D0;
-    color: #99E2D0;
-    opacity: 0;
-  }
-  .menu .ckeck-effet {
-    background-color: white;
-    color: #99E2D0;
-    border-radius: 50%;
-    padding: 4px;
-  }
-  .menu .card-menu:hover > .check {
-    opacity: 1;
-    animation: valider 0.3s both;
-  }
-  .menu .card-menu:hover > .prix-menu {
-    animation: prix 0.3s both;
   }
   .menu .commande-menu .commander {
     transition: 1s;
