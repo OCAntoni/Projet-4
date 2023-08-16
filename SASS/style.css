@@ -385,6 +385,22 @@ footer .mail {
 }
 
 /*--Menu--*/
+@keyframes apparition {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes remplir {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
 @keyframes valider {
   from {
     transform: translateX(30px);
@@ -406,7 +422,7 @@ footer .mail {
 .menu {
   position: relative;
   z-index: 1;
-  margin-top: -30px;
+  margin-top: -58px;
   background-color: #f6f6f6;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -432,6 +448,14 @@ footer .mail {
 }
 .menu .coeur-solid {
   opacity: 0;
+}
+.menu .coeur-solid:active {
+  opacity: 1;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: remplir 0.5s;
 }
 .menu .check {
   display: flex;
@@ -481,11 +505,22 @@ footer .mail {
   flex-direction: column;
   gap: 12px;
   margin: 40px 13px;
+  transform: scale(0);
+  animation: apparition 3s forwards;
+}
+.ordre-repas.ordre2 {
+  animation-delay: 0.3s;
+}
+.ordre-repas.ordre3 {
+  animation-delay: 0.6s;
 }
 
 .card-menu {
   position: relative;
-  margin: 0px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 12px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
 }
@@ -545,13 +580,6 @@ footer .mail {
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 500;
-}
-
-.card-menu {
-  border-radius: 15px;
-  padding: 15px;
-  background-color: white;
-  margin: 12px;
 }
 
 a {
@@ -651,6 +679,10 @@ a {
   }
   footer h4 {
     margin: 0px;
+    margin-left: 16px;
+  }
+  footer .pied-de-page li {
+    margin-right: 7px;
   }
   footer .pied-de-page ul {
     display: flex;
@@ -666,13 +698,8 @@ a {
     top: 30px;
   }
   /*--Menu--*/
-  @keyframes apparition {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
+  .img-menu img {
+    height: 435px;
   }
   .menu {
     max-width: 1055px;
@@ -683,17 +710,10 @@ a {
     justify-content: center;
   }
   .menu .ordre-repas {
-    transform: scale(0);
     max-width: 600px;
     margin: 0 auto;
     margin-bottom: 40px;
-    animation: apparition 3s forwards;
-  }
-  .menu .ordre-repas.ordre2 {
-    animation-delay: 0.3s;
-  }
-  .menu .ordre-repas.ordre3 {
-    animation-delay: 0.6s;
+    margin-top: 40px;
   }
   .menu .card-menu {
     position: relative;
