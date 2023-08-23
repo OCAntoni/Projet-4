@@ -1,4 +1,4 @@
-<h1>#OHMYFOOD Projet-4</h1>
+<h1>OHMYFOOD Projet-4</h1>
 
 4ème projet du parcours "Intégrateur web" avec Openclassrooms.
 L'objectif ? Développer en mobile-first et intégrez des animations CSS sur un site de restaurant gastronomique. S'occuper également de la partie reponsive du site.
@@ -8,7 +8,8 @@ L'objectif ? Développer en mobile-first et intégrez des animations CSS sur un 
 HTML/CSS/SASS
 No javaspript/framework CSS
 
-<h3>Liens</h3>
+<h2>Liens</h2>
 
 Vous pouvez retrouver le lien de la version final ici --> 
-Ainsi que tous les objectifs imposés --> https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/IW_P4+Animations+CSS+Ohmyfood/Brief+creatif+site+Ohmyfood.pdf
+
+Ainsi que tous les objectifs imposés --> <a href="https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/IW_P4+Animations+CSS+Ohmyfood/Brief+creatif+site+Ohmyfood.pdf">ici</a>
