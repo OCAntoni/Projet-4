@@ -6,10 +6,11 @@ L'objectif ? Développer en mobile-first et intégrez des animations CSS sur un 
 <h2>Technos. utilisées</h2>
 
 HTML/CSS/SASS
+
 No javaspript/framework CSS
 
 <h2>Liens</h2>
 
 Vous pouvez retrouver le lien de la version final ici --> 
 
-Ainsi que tous les objectifs imposés --> <a href="https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/IW_P4+Animations+CSS+Ohmyfood/Brief+creatif+site+Ohmyfood.pdf">ici</a>
+Ainsi que tous les objectifs imposés --> <a target="_blank" href="https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/IW_P4+Animations+CSS+Ohmyfood/Brief+creatif+site+Ohmyfood.pdf"> ici</a>
