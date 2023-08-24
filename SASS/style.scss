@@ -210,7 +210,9 @@ header {
     padding-right: 20px;
 
     h2 {
-        margin: 48px 80px 26px 20px;
+        margin: 0px;
+        margin-bottom: 48px;
+        margin-top: 26px;
     }
 
     .fonctionnement-cards{
@@ -303,7 +305,8 @@ header {
         font-family: $font-family1;
         font-size: 24px;
         font-weight: 700;
-        margin: 0px 80px 26px 20px;
+        margin: 0px;
+        margin-bottom: 28px;
     }
 
     h3 { 
@@ -316,6 +319,7 @@ header {
         height: 231px;
         border-radius: 15px;
         object-fit: cover;
+        display: block;
     }
 
     .heart-restaurants { 
@@ -332,32 +336,30 @@ header {
         font-size: 22px;
         right:25px;
         bottom: 33px;
-        background: linear-gradient(#FF79DA, #9356DC);
+        background: linear-gradient(#9356DC, #FF79DA);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     .heart-restaurants-solid {
-        display: none;
         position: absolute;
         opacity: 0;
         font-size: 22px;
         right:25px;
         bottom: 33px;
         background: none;
-        transition: 3s ease-out;
+        transition: 0.5s ease-out;
+        background: linear-gradient(#9356DC, #FF79DA);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
       .like-hovering:hover>.heart-restaurants-solid {
             display: unset;
             position: absolute;
             opacity: 1;
-            background: linear-gradient(#FF79DA, #9356DC);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-           
         }
 }
 
@@ -466,7 +468,8 @@ footer {
     i {
         position: absolute;
         left: 17px;
-        bottom: 23px;
+        top:50%;
+        transform: translateY(-50%);
     }
 }
 
@@ -544,15 +547,15 @@ footer {
 
     .coeur-solid {
         opacity: 0;
+        background: linear-gradient( #9356DC,#FF79DA);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.5s;
     }
 
     .like:hover>.coeur-solid{
         opacity: 1;
-        background: linear-gradient(#FF79DA, #9356DC);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: remplir 0.5s;
     }
 
 
@@ -626,7 +629,6 @@ footer {
     position: relative;
     background-color: white;
     border-radius: 15px;
-    margin: 12px;
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -710,8 +712,8 @@ a {
     /*--Header--*/
 
     header {
-        padding-top: 26px;
-        padding-bottom: 26px;
+        padding-top: 30px;
+        padding-bottom: 32px;
     }
 
     /*--Reservation--*/
@@ -730,11 +732,14 @@ a {
     }
 
     .button-hdp {
-        margin-bottom: 30px;
         transition: 1s;
 
         &:hover {
             opacity: 0.7;
+        }
+
+        button {
+            margin-bottom: 30px;
         }
     }
 
@@ -819,7 +824,8 @@ a {
         }
 
         i {
-            top:30px;
+            top:50%;
+            transform: translateY(-50%);
         }
     }
 
