@@ -268,7 +268,6 @@ header h1 {
   font-size: 22px;
   right: 25px;
   bottom: 33px;
-  transition: 3s all ease-in;
   opacity: 1;
 }
 .restaurants .heart-restaurants-2 {
@@ -288,15 +287,13 @@ header h1 {
   right: 25px;
   bottom: 33px;
   background: none;
-  transition: 0.5s ease-out;
+  transition: 0.5s;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .restaurants .like-hovering:hover > .heart-restaurants-solid {
-  display: unset;
-  position: absolute;
   opacity: 1;
 }
 
@@ -613,13 +610,14 @@ a {
   .reservation p {
     margin: 18px 0px 18px 0px;
   }
-  .button-hdp {
+  button {
+    opacity: 1;
     transition: 1s;
   }
-  .button-hdp:hover {
+  button:hover {
     opacity: 0.7;
   }
-  .button-hdp button {
+  button button {
     margin-bottom: 30px;
   }
   /*--Fonctionnement--*/
@@ -721,6 +719,7 @@ a {
     justify-content: end;
   }
   .menu .commande-menu .commander {
+    opacity: 1;
     transition: 1s;
   }
   .menu .commande-menu .commander:hover {
