@@ -111,10 +111,8 @@ h3 {
             border-radius: 50%;
             margin: 15px;
             animation: loader 1s infinite alternate;
-            animation-timing-function: ease-in-out;
 
-
-        &.point2 {
+         &.point2 {
             animation-delay: 0.2s;
         }
         
@@ -264,17 +262,6 @@ header {
 
 /*--Restaurants--*/
 
-@keyframes remplir {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-    
-}
-
 .restaurants {
     background-color: #f6f6f6;
     padding: 54px 18px 66px 17px;
@@ -356,11 +343,11 @@ header {
         -webkit-text-fill-color: transparent;
     }
 
-      .like-hovering:hover>.heart-restaurants-solid {
-            display: unset;
-            position: absolute;
-            opacity: 1;
-        }
+    .like-hovering:hover>.heart-restaurants-solid {
+        display: unset;
+        position: absolute;
+        opacity: 1;
+    }
 }
 
 .cards-content {
@@ -405,6 +392,15 @@ header {
 footer {
     padding: 22px 25px;
     background-color: #353535;
+
+    h4 {
+        color: white;
+        font-family: 'Shrikhand';
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0px;
+        margin-bottom: 16px;
+    }
 }
 
 .pied-de-page {
@@ -414,6 +410,9 @@ footer {
 
     p {
         margin: 0px;
+        font-family: $font-family1;
+        font-size: 16px;
+        font-weight: 500;
     }
 
     li {
@@ -428,27 +427,9 @@ footer {
         margin: 0px;
         gap:7px;
     }
-}
-
-footer {
-    
-    h4 {
-        color: white;
-        font-family: 'Shrikhand';
-        font-size: 18px;
-        font-weight: 400;
-        margin: 0px;
-        margin-bottom: 16px;
-    }
 
     .fa-footer {
         margin-right: 11px;
-    }
-
-    p {
-        font-family: $font-family1;
-        font-size: 16px;
-        font-weight: 500;
     }
 
     .mail {
@@ -554,7 +535,7 @@ footer {
         transition: 0.5s;
     }
 
-    .like:hover>.coeur-solid{
+    .like:hover>.coeur-solid {
         opacity: 1;
     }
 
@@ -864,28 +845,14 @@ a {
             width: 100%;
         }
 
-        .coeur-solid {
-            opacity: 0;
-        }
-
-        .like:hover>.coeur-solid {
-            opacity: 1;
-            background: linear-gradient(#FF79DA, #9356DC);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: remplir 0.5s;
-        }
-
-            .plat-menu  {
-                &, p {
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
+        .plat-menu {
+            &, p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
                 }
             }
         
-
         .prix-menu {
             display: flex;
             justify-content: end;
@@ -904,7 +871,3 @@ a {
         }
     }
 }
-
-
-
-/* Continuer ici transcription css en sass pour les pages de menu*/ 
